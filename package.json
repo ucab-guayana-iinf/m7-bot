@@ -1,11 +1,54 @@
 {
   "name": "m7-bot",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "private": false,
   "author": "Angel Rodríguez",
-  "license": "MIT"
+  "bin": {
+    "m7": "bin/m7"
+  },
+  "scripts": {
+    "format": "prettier --write **/*.{js,json} && standard --fix",
+    "lint": "standard",
+    "test": "jest",
+    "watch": "jest --watch",
+    "snapupdate": "jest --updateSnapshot",
+    "coverage": "jest --coverage",
+    "start": "node bin/m7"
+  },
+  "files": [
+    "src",
+    "LICENSE",
+    "readme.md",
+    "docs",
+    "bin"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@lenne.tech/gluegun-menu": "^0.0.4",
+    "chalk": "^4.0.0",
+    "gluegun": "latest",
+    "no-try": "^1.1.3",
+    "node-localstorage": "^2.1.6",
+    "puppeteer": "^3.0.2",
+    "puppeteer-utilz": "^2.0.1",
+    "signale": "^1.4.0"
+  },
+  "devDependencies": {
+    "jest": "^24.1.0",
+    "prettier": "^1.12.1",
+    "standard": "^12.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
 }
