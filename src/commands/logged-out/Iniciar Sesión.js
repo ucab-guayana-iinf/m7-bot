@@ -7,7 +7,7 @@ module.exports = {
       message: 'correo eléctronico'
     }
     const askPassword = {
-      type: 'input',
+      type: 'password',
       name: 'password',
       message: 'contraseña'
     }
